@@ -2,9 +2,9 @@
   "name": "neto-nd-homeworks-express",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "dist/app.ts",
   "scripts": {
-    "start": "nodemon app.js localhost 8080"
+    "start": "nodemon dist/app.js localhost 8080"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
