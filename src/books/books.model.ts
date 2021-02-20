@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const { Schema, SchemaTypes } = mongoose;
 const schema = new Schema({
@@ -9,6 +9,5 @@ const schema = new Schema({
   fileCover: SchemaTypes.String
 });
 
-const Book = mongoose.model("Book", schema);
+export const Book = mongoose.model("Book", schema);
 
-module.exports = { Book };

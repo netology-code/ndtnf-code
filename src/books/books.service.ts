@@ -1,17 +1,17 @@
-const { Book } = require("./books.model");
+import { Book } from "./books.model";
 
-class BooksService {
+export class BooksService {
   constructor() {
     console.log("new BooksService");
   }
-  async create(data) {
+
+  async create(data: any) {
     const book = new Book(data);
     await book.save();
     return book;
   }
+
   findAll() {
     return Book.find();
   }
 }
-
-module.exports = { BooksService };
