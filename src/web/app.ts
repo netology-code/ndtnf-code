@@ -5,10 +5,10 @@ import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
 
-const booksRouter = require("./books/books.routes");
+const booksRouter = require("./routes/books.routes");
 
-require("./db_connection");
-require("./container");
+require("../infrastructure/db_connection");
+require("../infrastructure/container");
 
 const app = express();
 app.use(logger("dev"));

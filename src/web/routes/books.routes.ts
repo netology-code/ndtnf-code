@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { container } from "../container";
-import { BooksService } from './books.service';
+import { container } from "../../infrastructure/container";
+import { BooksService } from '../../books/books.service';
 const router = Router();
 
 router.get("", async (req, res) => {
