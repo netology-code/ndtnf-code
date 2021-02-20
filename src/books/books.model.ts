@@ -1,13 +1,13 @@
-import mongoose from "mongoose";
+import mongoose, { Document, Schema } from "mongoose";
+import { Book } from './book';
 
-const { Schema, SchemaTypes } = mongoose;
 const schema = new Schema({
-  title: SchemaTypes.String,
-  description: SchemaTypes.String,
-  authors: [SchemaTypes.String],
-  favorite: SchemaTypes.String,
-  fileCover: SchemaTypes.String
+  title: String,
+  description: String,
+  authors: [String],
+  favorite: String,
+  fileCover: String
 });
 
-export const Book = mongoose.model("Book", schema);
+export const BookModel = mongoose.model<Book & Document>("Book", schema);
 
